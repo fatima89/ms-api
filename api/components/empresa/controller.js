@@ -16,27 +16,8 @@ function add_empresa( empresa ) {
     })
 }
 
-function update_empresa( empresa ) {
-    return new Promise((resolve, reject) => {
-        let resultado = storage.update( empresa )
-        if (resultado) {
-            return resolve( empresa )
-        } else {
-            return reject('No existe la empresa.')
-        }
-    })
-}
-
-function delete_empresa( empresa ) {
-    return new Promise((resolve, reject) => {
-        storage.delete( empresa )
-        resolve( empresa )
-    })
-}
 
 module.exports = {
     get_empresa,
     add_empresa,
-    update_empresa,
-    delete_empresa,
 }

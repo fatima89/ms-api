@@ -11,11 +11,6 @@ const empresa_schema = new Schema({
     nombre: req_string,
     domicilio: req_string,
     telefono: req_string,
-    representanteLegal: {
-        type: Schema.ObjectId,
-        ref: 'representanteLegal',
-    },
-
 })
 
 const model = mongoose.model('empresa', empresa_schema)
